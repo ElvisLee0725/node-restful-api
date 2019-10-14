@@ -6,8 +6,8 @@ const auth = require('../middleware/auth');
 const admin = require('../middleware/admin');
 
 router.get('/', async (req, res) => {
-  const genres = await Genre.find().sort('name');
-  res.send(genres);
+    const genres = await Genre.find().sort('name');
+    res.send(genres);
 });
 
 // Run the middleware function 'auth' before the route handler
